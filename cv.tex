@@ -18,6 +18,7 @@
 \hypersetup{colorlinks,breaklinks,urlcolor=linkcolour, linkcolor=linkcolour}
 
 %FONTS
+\usepackage{fontawesome5}
 \defaultfontfeatures{Mapping=tex-text}
 %\setmainfont[SmallCapsFont = Fontin SmallCaps]{Fontin}
 %%% modified for Karol Kozioł for ShareLaTeX use
@@ -32,7 +33,7 @@ ItalicFont = Fontin-Italic.otf
 %CV Sections inspired by: 
 %http://stefano.italians.nl/archives/26
 \titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
-\titlespacing{\section}{0pt}{-2mm}{-1mm}
+\titlespacing{\section}{0pt}{1mm}{1mm}
 %Tweak a bit the top margin
 %\addtolength{\voffset}{-2cm}
 
@@ -68,29 +69,32 @@ ItalicFont = Fontin-Italic.otf
 \font\fb=''[cmr10]'' %for use with \LaTeX command
 
 %--------------------TITLE-------------
-\par{\centering
-		{\Huge Sameer \textsc{Pandit}
-	}\bigskip\par}
+\begin{center}
+    {\Huge Sameer \textsc{Pandit}} \\ \vspace{5pt}
+    \small \faPhone* \texttt{+91 9986368688} \hspace{1pt} $|$
+    \hspace{1pt} \faEnvelope \hspace{2pt} \href{mailto:getsam1234@gmail.com}{getsam1234@gmail.com} \hspace{1pt} $|$ 
+    \hspace{1pt} \faLinkedin \hspace{2pt} \href{www.linkedin.com/in/sameer-pandit-60007919}{sameer-pandit} \hspace{1pt} $|$
+    \hspace{1pt} \faMapMarker* \hspace{2pt}\texttt{Bengaluru, KA}
+    \\ \vspace{-3pt}
+\end{center}
+% \par{\centering
+% 		{\Huge Sameer \textsc{Pandit}
+% 	}\bigskip\par}
 
 %--------------------SECTIONS-----------------------------------
-%Section: Personal Data
-\section{Personal Data}
-
-\begin{tabular}{rl}
-    \textsc{Place and Date of Birth:} & Nagpur Maharashtra, India  | 30 Oct 1990 \\
-    \textsc{Address:}   & Plot 8, 9, Flat No. 302, Nirmal Apartment-II Dongrelayout , Shankar Nagar\\&\normalsize Nagpur,440010\\
-    \textsc{Phone:}     & +91 9986368688\\
-    \textsc{email:}     & \href{mailto:getsam1234@gmail.com}{getsam1234@gmail.com}
-\end{tabular}
-
 %Section: Work Experience at the top
+\hfill \break
 \section{Work Experience}
-\begin{tabular}{r|p{15cm}}
- \emph{Current} & Member of Technical Staff at \textsc{Oracle India}, Bangalore \\
- \emph{Jul '14-Oct'16}&\emph{Weblogic Core Runtime}\\ &\footnotesize{Worked in multiple projects in Weblogic Appserver team. Worked on configutation component that deals with config management, config upgrade. I contributed majorly in zero downtime patching(ZDT) team, shipping patching features for both multi-tanent(MT) and Non-MT weblogic.}\\
+\begin{tabular}{rp{15cm}}
+ \textsc{Current} & \textbf{SDE-3 at Groupon.com, Bangalore} \\
+ \textsc{Oct '19-present}&\textbf{Groupon Local - Merchant Experience} \\ &\normalsize{Worked on Java EE 8 RI a.k.a GlassFish 5. Worked on fixing bugs, integrating new spec. implementations.}\\ 
+ \textsc{Dec '17-Oct'19}& \textbf{Groupon Goods Supply} \\ &\normalsize{Worked in Goods supply team. Worked on configutation component that deals with config management, config upgrade. I contributed significantly in zero downtime patching(ZDT) team, shipping patching features for both multi-tanent(MT) and Non-MT weblogic.} \\
   \multicolumn{2}{c}{} \\
- \emph{Oct '16-present}&\emph{GlassFish JavaEE RI Team}\\&\footnotesize{Worked on Java EE 8 RI a.k.a GlassFish 5. Worked on fixing bugs, integrating new spec. implementations.}\\
+ \textsc{Jul '14-Dec'17}& \textbf{Member of Technical Staff at Oracle India, Bangalore}\\
+ &\textbf{Weblogic Core Runtime} \\ &\normalsize{Worked in Weblogic Appserver team. Worked on configutation component that deals with config management, config upgrade. I contributed significantly in zero downtime patching(ZDT) team, shipping patching features for both multi-tanent(MT) and Non-MT weblogic.} \\ 
+ &\textbf{GlassFish JavaEE RI Team} \\ &\normalsize{Worked on Java EE 8 RI a.k.a GlassFish 5. Worked on fixing bugs, integrating new spec. implementations.}\\
  \multicolumn{2}{c}{} \\
+
 \end{tabular}
 
 %Section: Education
@@ -108,17 +112,15 @@ ItalicFont = Fontin-Italic.otf
 %Section: Scholarships and additional info
 \section{Projects and Publications}
 \begin{tabular}{rp{15cm}}
- \textsc{Jul.'14} & \textbf{M.Tech. Thesis: 2G/3G Internet Measurement in Rural India.}\\
- &\normalsize There is very little understanding of cellular data connectivity
-in rural areas of India.\\ &\normalsize The project involves finding out reasons affecting
-the performance of 2G/3G data\\ &\normalsize networks and their improvement by changing
-network and system parameters at \\ &\normalsize client and server side.  | \small Advisor: Dr. Aaditeshwar Seth\\
-\textsc{Dec'15} & \textbf{\href{http://dl.acm.org/citation.cfm?id=2830649}{Publication}:} Revisiting the State of Cellular Data Connectivity in India \emph{Sharma et.al.}\\ &\normalsize \emph{ACM DEV '15} Proceedings of the 2015 Annual Symposium on Computing for Development\\
-\textsc{Apr.'13} & \textbf{M.Tech. Minor Project:} Web-based Measurement Node Monitoring Portal
-\\ &\normalsize Built a Django based which displays information like which
-measurement node is down/up,  &\normalsize  various network metrics like RTT,Uplink/Downlink Throughput and other network characteristics.
-\textsc{May.'13} & \textbf{Course Project: }GHS Minimum Spanning Tree.  Implemented Gallager\\
- &\normalsize , Humblet and Spira Distributed Minimum Spanning Tree Algorithm. \\
+ \textsc{Jul.'14} & \textbf{M.Tech. Thesis: 2G/3G Intnet Measurement in Rural India.}
+ \normalsize There is very little understanding of cellular data connectivity
+in rural areas of India. The project involves finding out reasons affecting
+the performance of 2G/3G data networks and their improvement by changing
+network and system parameters at client and server side.  | \small\textbf{ Advisor}: Dr. Aaditeshwar Seth\\
+\textsc{Dec'15} & \textbf{\href{http://dl.acm.org/citation.cfm?id=2830649}{Publication}:} Revisiting the State of Cellular Data Connectivity in India \emph{Sharma et.al.} \emph{ACM DEV '15} Proceedings of the 2015 Annual Symposium on Computing for Development\\
+\textsc{Apr.'13} & \textbf{M.Tech. Minor Project:} Web-based Measurement Node Monitoring Portal\normalsize Built a Django based which displays information like which measurement node is down/up, various network metrics like RTT,Uplink Downlink Throughput and other network characteristics\\
+\textsc{Apr.'13} & \textbf{M.Tech. Minor Project:} Web-based Measurement Node Monitoring Portal\\
+\textsc{May.'13} & \textbf{Course Project:} GHS Minimum Spanning Tree.Implemented Gallager \normalsize , Humblet and Spira Distributed Minimum Spanning Tree Algorithm. \\
 \textsc{May.'12} & \textbf{B.Tech. Project: Vidlib} A Video library for academic Environment.\\
 \end{tabular}
 
